@@ -29,7 +29,7 @@ if(isset($_POST['login'])){
 
 <div class="auth-card">
 <h2>DEMS</h2>
-<p class="subtitle">Daily Expense Manager</p>
+<p class="subtitle">Daily Expense Management System</p>
 
 <?php if(isset($error)) echo "<div class='error'>$error</div>"; ?>
 
