@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+    --yellow:#ffd3ac;
+    --pink:#ccbeb1;
+    --blue:#664c36;
+    --dark:#331c08;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#331c08,#664c36,#ccbeb1);
+    background-attachment: fixed;
+}
+
+/* =========================
+   AUTH (LOGIN / REGISTER)
+========================= */
+
+.auth-body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.auth-card{
+    width:370px;
+    padding:40px;
+    border-radius:22px;
+    background: linear-gradient(135deg, rgba(102,76,54,0.25), rgba(204,190,177,0.25));
+    backdrop-filter: blur(18px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+    text-align:center;
+    animation: fadeUp 0.8s ease;
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.auth-card h2{
+    color:#fff;
+    font-size:26px;
+}
+
+.subtitle{
+    color:#eee;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input, select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+    border:none;
+    outline:none;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.08));
+    color:#fff;
+    transition:0.3s;
+}
+
+input::placeholder{
+    color:#ddd;
+}
+
+input:focus, select:focus{
+    box-shadow:0 0 15px rgba(102,76,54,0.6);
+}
+
+/* =========================
+   BUTTONS (GRADIENT ONLY)
+========================= */
+
+button{
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary{
+    width:100%;
+    padding:12px;
+    border-radius:30px;
+    background: linear-gradient(45deg,var(--yellow),var(--pink),var(--blue));
+    color:#fff;
+    font-weight:600;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* DELETE BUTTON */
+.btn-danger{
+    padding:6px 12px;
+    border-radius:20px;
+    background: linear-gradient(45deg,#664c36,#331c08);
+    color:#fff;
+}
+
+.btn-danger:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.switch{
+    margin-top:15px;
+    font-size:14px;
+    color:#fff;
+}
+
+.switch a{
+    color:var(--yellow);
+    text-decoration:none;
+}
+
+/* =========================
+   SIDEBAR (GRADIENT)
+========================= */
+
+.sidebar{
+    width:240px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    background: linear-gradient(180deg,var(--dark),#3b2415,#664c36);
+    padding:20px;
+    box-shadow:5px 0 25px rgba(0,0,0,0.5);
+}
+
+.sidebar h2{
+    color:var(--yellow);
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* MENU ITEMS */
+.sidebar a{
+    display:block;
+    padding:12px;
+    margin:8px 0;
+    color:#ddd;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+/* hover gradient */
+.sidebar a:hover{
+    background: linear-gradient(90deg,var(--blue),var(--pink));
+    color:#fff;
+    transform:translateX(6px);
+}
+
+/* logout special gradient */
+.sidebar a:last-child{
+    margin-top:20px;
+}
+
+.sidebar a:last-child:hover{
+    background: linear-gradient(90deg,#331c08,#664c36);
+    color:#fff;
+}
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.main{
+    margin-left:260px;
+    padding:20px;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+/* =========================
+   DASHBOARD CARDS (GRADIENT)
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:20px;
+    border-radius:18px;
+    color:#fff;
+    background: linear-gradient(135deg,var(--blue),var(--pink));
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    font-size:16px;
+}
+
+.card p{
+    font-size:24px;
+    font-weight:600;
+}
+
+/* =========================
+   FORM BOX (GRADIENT)
+========================= */
+
+.form-box{
+    padding:25px;
+    border-radius:18px;
+    background: linear-gradient(135deg,#ffd3ac,#ccbeb1);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+th{
+    background: linear-gradient(90deg,var(--blue),var(--pink));
+    color:#fff;
+}
+
+td{
+    background:#fff;
+}
+
+th, td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error{
+    background: linear-gradient(90deg,#664c36,#331c08);
+    color:#fff;
+    padding:8px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
